@@ -8,7 +8,9 @@ import {Dish} from '../shared/dish'
 })
 export class DishdetailComponent implements OnInit {
 
-@Input()
+//binds property from [dish]=selectedDish in menu.comp.html
+
+@Input() 
   dish:Dish;
 
   constructor() { }
