@@ -13,7 +13,8 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
    onSubmit(){
-     console.log("User :" ,this.user);
+     console.log("User :" ,this.user); // will store later in SERVER
+     
      this.dialogRef.close();
    }
 }
