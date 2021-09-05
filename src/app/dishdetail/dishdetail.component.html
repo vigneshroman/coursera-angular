@@ -31,6 +31,11 @@
 
   </div>
 
+  <!-- <div fxFlex [hidden]="dish">
+    <mat-spinner></mat-spinner><h4>Loading . . . Please Wait</h4>
+  </div> -->
+  
+
 <div fxFlex="40" >
    
     <mat-list *ngIf="dish" >
@@ -43,6 +48,10 @@
     <p matLine> <span> -- {{item.author}} {{item.date | date}}</span> </p>
   </mat-list-item>
 </mat-list>
+  </div>
+
+  <div fxFlex [hidden]="dish">
+    <mat-spinner></mat-spinner><h4>Loading . . . Please Wait</h4>
   </div>
 
 </div>
