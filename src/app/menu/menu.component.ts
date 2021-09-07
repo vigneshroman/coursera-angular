@@ -18,8 +18,9 @@ export class MenuComponent implements OnInit {
 
   ngOnInit() {
     this.dishService.getDishes()
-    .then(dishes=>this.dishes=dishes);
+    .subscribe(dishes=>this.dishes=dishes);
   }
+  //changed then to subscribe when using observable - applies to whereever service is used
    onSelect(dish:Dish){
  this.selectedDish=dish;
    }
