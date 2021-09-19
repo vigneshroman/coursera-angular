@@ -15,10 +15,13 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import {MatSliderModule} from '@angular/material/slider';
+import { MatSliderModule } from '@angular/material/slider';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+// import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
+import { baseURL } from './shared/baseurl';
 
 import { AppComponent } from './app.component';
 
@@ -69,13 +72,15 @@ import { LeaderService } from './services/leader.service';
     MatSelectModule,
     MatSlideToggleModule,
     MatSliderModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    HttpClientModule
         
   ],
   providers: [
     DishService,
     PromotionService,
-    LeaderService
+    LeaderService,
+    {provide:'BaseURL', useValue:baseURL}
     
   ],
   entryComponents:[LoginComponent], // need  to include here to use the component as a overlay

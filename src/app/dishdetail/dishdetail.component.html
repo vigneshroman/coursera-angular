@@ -9,7 +9,7 @@
         </mat-card-title>
       </mat-card-header>
 
-      <img mat-card-image src={{dish.image}} alt={{dish.name}}>
+      <img mat-card-image src="{{BaseURL + dish.image}}" alt={{dish.name}}>
 
       <mat-card-content>
         <p>{{dish.description}}</p>
@@ -53,7 +53,7 @@
       <mat-list>
         <mat-list-item>
           <p matLine>{{commentForm.value.comment}}<p>
-              <p matLine>{{commentForm.value.rating}}<p>
+              <p matLine>{{commentForm.value.rating}} stars<p>
                   <p matLine>-- {{commentForm.value.author}}<p>
         </mat-list-item>
       </mat-list>

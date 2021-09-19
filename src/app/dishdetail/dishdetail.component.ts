@@ -1,4 +1,4 @@
-import { Component, OnInit ,Input,ViewChild} from '@angular/core';
+import { Component, OnInit ,Input,ViewChild,Inject} from '@angular/core';
 import { Params ,ActivatedRoute} from '@angular/router';
 import { Location } from '@angular/common';
 
@@ -49,7 +49,8 @@ export class DishdetailComponent implements OnInit {
   constructor( private route:ActivatedRoute,
     private dishService:DishService, 
     private location:Location,
-    private fb:FormBuilder) { this.createForm()}
+    private fb:FormBuilder,
+    @Inject('BaseURL') private BaseURL) { this.createForm()}
 
   // ngOnInit() {
   //   let id=this.route.snapshot.params['id'];
