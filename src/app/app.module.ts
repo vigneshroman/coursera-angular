@@ -38,7 +38,7 @@ import { LoginComponent } from './login/login.component';
 import { DishService } from './services/dish.service';
 import { PromotionService } from './services/promotion.service';
 import { LeaderService } from './services/leader.service';
-
+import {ProcessHTTPMsgService} from './services/process-httpmsg.service';
 
 
 @NgModule({
@@ -80,7 +80,10 @@ import { LeaderService } from './services/leader.service';
     DishService,
     PromotionService,
     LeaderService,
-    {provide:'BaseURL', useValue:baseURL}
+    ProcessHTTPMsgService,
+    {provide:'BaseURL', useValue:baseURL},
+    
+    
     
   ],
   entryComponents:[LoginComponent], // need  to include here to use the component as a overlay
