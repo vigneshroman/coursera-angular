@@ -1,4 +1,4 @@
-import { Directive,ElementRef,Renderer2,HostListener } from '@angular/core';
+import { Directive, ElementRef, HostListener, Renderer2 } from '@angular/core';
 
 @Directive({
   selector: '[appHighlight]'
@@ -14,4 +14,5 @@ export class HighlightDirective {
   @HostListener('mouseleave') onmouseleave(){
     this.renderer.removeClass(this.el.nativeElement,'highlight')
   }
+
 }
